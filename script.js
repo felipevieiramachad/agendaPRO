@@ -40,11 +40,13 @@ function atualizarLista() {
 
         if (tarefa.concluida) {
             li.classList.add("concluida");
+        } else {
+            li.classList.add("pendente");
         }
 
         li.innerHTML = `
             <div class="texto">
-                <strong>${tarefa.titulo}</strong><br>
+                <strong>${tarefa.titulo}</strong><br><br>
                 <small>${tarefa.descricao || ""}</small>
             </div>
 

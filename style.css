@@ -3,8 +3,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #667eea;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -12,14 +12,16 @@ body {
 
 .container {
     width: 400px;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
+    color: #333;
 }
 
 .form input,
@@ -27,8 +29,16 @@ h1 {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
 }
 
 textarea {
@@ -41,20 +51,22 @@ textarea {
 .texto {
     word-wrap: break-word;
     overflow-wrap: break-word;
+    text-align: justify;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #45a049;
+    filter: brightness(1.1);
 }
 
 ul {
@@ -63,44 +75,55 @@ ul {
 }
 
 li {
-    background: #eee;
+    background: #f4f6fb;
     margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .concluida .texto {
     text-decoration: line-through;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .concluida {
-    background-color: #c8e6c9;
+    background: linear-gradient(135deg, #a8ff78, #78ffd6);
+}
+
+.pendente {
+    background: linear-gradient(135deg, #ffe082, #ffca28);
 }
 
 .acoes {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .acoes button {
     width: auto;
     margin-right: 5px;
-    padding: 5px;
+    padding: 6px 10px;
     font-size: 12px;
 }
 
 .btn-concluir {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #00c853, #69f0ae);
 }
 
 .btn-pendente {
-    background-color: #ff9800;
+    background: linear-gradient(135deg, #ffd54f, #ffb300);
+    color: #333;
 }
 
 .btn-editar {
-    background-color: #2196F3;
+    background: linear-gradient(135deg, #2196f3, #21cbf3);
 }
 
 .btn-excluir {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
 }
